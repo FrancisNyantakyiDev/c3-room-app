@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Manrope";
+  src: url(../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf)
+    format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  --font-family: "Manrope", sans-serif;
+
+  /* Colors */
+  --bg-color: #f5f5f5;
+  --color-teal: #0d9488;
+  --color-teal-av: #0d9489c8;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Radius */
+  --radius-sm: 30px;
+  --radius-md: 40px;
+  --radius-lg: 60px;
+
+  /* Border */
+  --border-primary: 1px solid var(--color-teal);
+  --border-secondary: 1px solid var(--color-black);
+
+  /* Animation */
+  --animation-slide-in: slide-in 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animation-slide-out: slide-out 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
