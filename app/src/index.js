@@ -1,16 +1,20 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 const path = require("node:path");
 
 if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+Menu.setApplicationMenu(null);
+
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 700,
     height: 500,
-    minWidth: 700,
-    minHeight: 500,
+
+    resizable: false,
+    maximizable: false,
+    fullscreenable: false,
 
     backgroundColor: "#F5F5F5",
 
