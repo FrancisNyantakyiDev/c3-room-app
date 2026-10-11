@@ -1,11 +1,11 @@
 {
-  "name": "app",
-  "productName": "app",
+  "name": "c3-room",
+  "productName": "C3 Room",
   "version": "1.0.0",
   "private": true,
-  "description": "My Electron application description",
+  "description": "An Open-source Offline Collaboration Platform",
   "keywords": [],
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "author": {
     "name": "Francis Nyantakyi",
     "email": "francis.nyantakyi.dev@gmail.com"

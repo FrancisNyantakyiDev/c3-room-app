@@ -27,8 +27,8 @@
   --border-secondary: 1px solid var(--color-black);
 
   /* Animation */
-  --animation-slide-in: slide-in 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  --animation-slide-out: slide-out 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animation-slide-in: slide-in 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animation-slide-out: slide-out 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 * {
@@ -45,7 +45,7 @@ body {
 @keyframes slide-in {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
 
   to {
@@ -64,4 +64,33 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+}
+
+/* Header Styling */
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid var(--color-white);
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.about {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: var(--border-primary);
+}
+
+.about:hover {
+  background-color: var(--color-teal);
+}
+
+.about:active {
+  background-color: var(--color-teal-av);
 }

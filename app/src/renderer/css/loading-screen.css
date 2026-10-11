@@ -1,0 +1,27 @@
+/* Container */
+.loading-screen-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+}
+
+/* Logo */
+.loading-screen-logo img {
+  width: 300px;
+}
+
+/* Info Styling */
+.info {
+  margin-top: 10px;
+}
+
+.info p {
+  text-align: center;
+}
+
+#c3-room-name {
+  font-weight: bold;
+}

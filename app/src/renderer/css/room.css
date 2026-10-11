@@ -1,46 +1,19 @@
-/* Header Styling */
-.top-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 2px solid var(--color-white);
-}
-
-.logo {
-  width: 100px;
-}
-
-.logo:hover {
-  cursor: pointer;
-}
-
-.about {
-  cursor: pointer;
-  padding: 8px;
-  border-radius: var(--radius-sm);
-  border: var(--border-primary);
-}
-
-.about:hover {
-  background-color: var(--color-teal);
-}
-
-.about:active {
-  background-color: var(--color-teal-av);
-}
-
 /* Main Page Content Styling */
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   animation: var(--animation-slide-in);
 }
 
 .title {
   margin-top: 20px;
+}
+
+.title p {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* Action Buttons Styling */
@@ -49,6 +22,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 60vh;
   gap: 30px;
   padding: 20px 30px;
 }
@@ -100,17 +74,4 @@
 
 .join-room-btn img {
   object-fit: contain;
-}
-
-/* Info Styling */
-.info {
-  margin-top: 10px;
-}
-
-.info p {
-  text-align: center;
-}
-
-#c3-room-name {
-  font-weight: bold;
 }
