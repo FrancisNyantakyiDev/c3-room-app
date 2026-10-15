@@ -15,13 +15,6 @@
 
 /* Info Styling */
 .info {
-  margin-top: 10px;
-}
-
-.info p {
+  margin-top: 20px;
   text-align: center;
-}
-
-#c3-room-name {
-  font-weight: bold;
 }

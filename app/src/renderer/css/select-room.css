@@ -1,22 +1,13 @@
-/* Main Page Content Styling */
-.content {
+/* Content */
+.select-room-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: var(--animation-slide-in);
+  animation: var(--animation-zoom-out);
 }
 
-.title {
-  margin-top: 20px;
-}
-
-.title p {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* Action Buttons Styling */
+/* Action Buttons */
 .actions {
   display: flex;
   flex-direction: row;
@@ -27,7 +18,7 @@
   padding: 20px 30px;
 }
 
-.create-room-btn,
+.new-room-btn,
 .join-room-btn {
   width: 150px;
   height: 150px;
@@ -42,24 +33,24 @@
   border: var(--border-primary);
 }
 
-.create-room-btn:hover,
+.new-room-btn:hover,
 .join-room-btn:hover {
   background-color: var(--color-teal);
 }
 
-.create-room-btn:active,
+.new-room-btn:active,
 .join-room-btn:active {
   background-color: var(--color-teal-av);
 }
 
-.create-room-btn p,
+.new-room-btn p,
 .join-room-btn p {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
 }
 
-.create-room-btn i,
+.new-room-btn i,
 .join-room-btn img {
   width: 70px;
   height: 70px;
@@ -68,7 +59,7 @@
   justify-content: center;
 }
 
-.create-room-btn i {
+.new-room-btn i {
   font-size: 60px;
 }
 

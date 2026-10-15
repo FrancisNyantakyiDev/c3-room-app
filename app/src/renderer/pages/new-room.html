@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C3 Room</title>
+    <link rel="stylesheet" href="../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/new-room.css" />
+  </head>
+  <body>
+    <div>
+      <!-- Content -->
+      <div class="new-room-content">
+        <!-- Content Header -->
+        <h3 class="content-header">New Room</h3>
+
+        <div>
+          <div class="new-room-info">
+            <p>Get started quickly, Or change settings</p>
+
+            <div>
+              <!-- Settings Button -->
+              <div class="settings-btns-container">
+                <i
+                  id="show-settings-btn"
+                  class="bi bi-arrow-up-circle-fill"
+                ></i>
+                <i
+                  id="hide-settings-btn"
+                  class="bi bi-arrow-down-circle-fill"
+                  style="display: none"
+                ></i>
+              </div>
+
+              <!-- Settings Container-->
+              <div id="settings-container" class="settings-container">
+                <div class="settings">
+                  <p>Control</p>
+                  <select name="" id="">
+                    <option value="">Everyone</option>
+                    <option value="">Host Only</option>
+                  </select>
+                </div>
+
+                <div class="settings">
+                  <p>Control</p>
+                  <select name="" id="">
+                    <option value="">Everyone</option>
+                    <option value="">Host Only</option>
+                  </select>
+                </div>
+
+                <div class="settings">
+                  <p>Control</p>
+                  <select name="" id="">
+                    <option value="">Everyone</option>
+                    <option value="">Host Only</option>
+                  </select>
+                </div>
+
+                <div class="settings">
+                  <p>Control</p>
+                  <select name="" id="">
+                    <option value="">Everyone</option>
+                    <option value="">Host Only</option>
+                  </select>
+                </div>
+                <div class="settings">
+                  <p>Control</p>
+                  <select name="" id="">
+                    <option value="">Everyone</option>
+                    <option value="">Host Only</option>
+                  </select>
+                </div>
+
+                <div class="settings">
+                  <p>Control</p>
+                  <select name="" id="">
+                    <option value="">Everyone</option>
+                    <option value="">Host Only</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-room-option">
+          <button id="start-btn">Start</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Room Modal-->
+    <div id="active-room-modal" class="modal">
+      <div id="arm-modal-container" class="modal-container">
+        <h3>Room Active</h3>
+
+        <!-- Modal Content -->
+        <div class="active-room-content">
+          <div class="room-detail">
+            <p>IP Address: <span id="ip-address">0.0.0.0:0000</span></p>
+            <p>Room ID: <span id="room-id">AA00</span></p>
+          </div>
+        </div>
+
+        <!-- Active Room Options -->
+        <div class="room-options">
+          <button>Open Room</button>
+          <div>
+            <button>Room Settings</button>
+            <button>Export Report</button>
+          </div>
+          <button id="exit-room">Exit Room</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Button -->
+    <div id="home-btn"><i class="bi bi-house-fill"></i></div>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/new-room.js"></script>
+  </body>
+</html>

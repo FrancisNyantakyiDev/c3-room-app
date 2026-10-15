@@ -1,5 +1,5 @@
 window.onload = function () {
   setTimeout(function () {
-    window.location.href = "pages/room.html";
-  }, 4000);
+    window.location.href = "pages/select-room.html";
+  }, 2000);
 };

@@ -1,0 +1,53 @@
+/* Content */
+.join-room-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: var(--animation-zoom-in);
+}
+
+.join-room-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 60vh;
+}
+
+.join-room-content input {
+  outline: none;
+  box-shadow: none;
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border: var(--border-primary);
+  border-radius: var(--radius-md);
+}
+
+.join-room-content input:focus {
+  outline: none;
+}
+
+.join-room-content input::placeholder {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.join-room-content button {
+  padding: 10px;
+  width: 100px;
+  border: var(--border-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.join-room-content button:hover {
+  background-color: var(--color-teal);
+}
+
+.join-room-content button:active {
+  background-color: var(--color-teal-av);
+}
