@@ -152,12 +152,11 @@
 }
 
 #exit-room {
-  border: none;
-  background-color: red;
+  border: 1px solid red;
 }
 
 #exit-room:hover {
-  background-color: #ff0000a0;
+  background-color: red;
 }
 
 #exit-room:active {
