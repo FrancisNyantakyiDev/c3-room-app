@@ -1,11 +1,5 @@
-const { app, BrowserWindow, Menu, dialog } = require("electron");
+const { BrowserWindow, dialog } = require("electron");
 const path = require("node:path");
-
-if (require("electron-squirrel-startup")) {
-  app.quit();
-}
-
-Menu.setApplicationMenu(null);
 
 // App Window
 function createWindow() {
@@ -20,14 +14,14 @@ function createWindow() {
     backgroundColor: "#F5F5F5",
 
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      preload: path.join(__dirname, "..", "preload.js"),
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: true,
     },
   });
 
-  // App Quit Confirmation
+  // App Quit Confimation
   let allowClose = false;
 
   mainWindow.on("close", (event) => {
@@ -41,7 +35,7 @@ function createWindow() {
       type: "question",
       title: "Quit C3 Room",
       message: "Are you sure you want to quit",
-      detail: "Any ongoing activity will interrupted",
+      detail: "Any activity will be interrupted",
       buttons: ["Cancel", "Quit"],
       defaultId: 0,
       cancelId: 0,
@@ -54,19 +48,11 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadFile(path.join(__dirname, "renderer", "index.html"));
+  mainWindow.loadFile(path.join(__dirname, "../..", "renderer", "index.html"));
+
+  return mainWindow;
 }
 
-app.whenReady().then(() => {
-  createWindow();
-
-  app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
-});
-
-app.on("window-all-closed", () => {
-  app.quit();
-});
+module.exports = {
+  createWindow,
+};
