@@ -2,7 +2,7 @@ const { BrowserWindow, dialog } = require("electron");
 const path = require("node:path");
 
 // App Window
-function createWindow() {
+function createAppWindow() {
   const mainWindow = new BrowserWindow({
     width: 700,
     height: 500,
@@ -33,9 +33,9 @@ function createWindow() {
 
     const response = dialog.showMessageBoxSync(mainWindow, {
       type: "question",
-      title: "Quit C3 Room",
-      message: "Are you sure you want to quit",
-      detail: "Any activity will be interrupted",
+      title: "Quit C3 Room App",
+      message: "Are you sure you want to quit the app",
+      detail: "Any ongoing activity will be interrupted",
       buttons: ["Cancel", "Quit"],
       defaultId: 0,
       cancelId: 0,
@@ -54,5 +54,5 @@ function createWindow() {
 }
 
 module.exports = {
-  createWindow,
+  createAppWindow,
 };

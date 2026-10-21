@@ -2,7 +2,7 @@
 const { app, Menu, BrowserWindow } = require("electron");
 
 // Main Imports
-const { createWindow } = require("./lifecycle/main-window");
+const { createAppWindow } = require("./window/app-window");
 const { roomhandlers } = require("./ipc/room-handlers");
 const { shutdownHandler } = require("./lifecycle/shutdown");
 
@@ -25,11 +25,11 @@ shutdownHandler({ stopRoomServer });
 
 // App Initialize
 app.whenReady().then(() => {
-  createWindow();
+  createAppWindow();
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
+      createAppWindow();
     }
   });
 });
