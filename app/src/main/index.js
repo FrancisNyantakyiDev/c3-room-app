@@ -15,7 +15,7 @@ if (require("electron-squirrel-startup")) {
 }
 
 // Remove default application menu (File/Edit/View etc.)
-Menu.setApplicationMenu(null);
+// Menu.setApplicationMenu(null);
 
 // Initialize IPC Handlers
 roomhandlers({ startRoomServer, stopRoomServer });
