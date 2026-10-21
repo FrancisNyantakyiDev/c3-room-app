@@ -16,7 +16,7 @@
         <h3 class="content-header">New Room</h3>
 
         <div>
-          <div class="new-room-info">
+          <div class="settings-wrapper">
             <p>Get started quickly, Or change settings</p>
 
             <div>
@@ -36,49 +36,39 @@
               <!-- Settings Container-->
               <div id="settings-container" class="settings-container">
                 <div class="settings">
-                  <p>Control</p>
-                  <select name="" id="">
-                    <option value="">Everyone</option>
-                    <option value="">Host Only</option>
+                  <p>Chat</p>
+                  <select id="chat">
+                    <option value="on" selected>On</option>
+                    <option value="off">Off</option>
                   </select>
                 </div>
 
                 <div class="settings">
-                  <p>Control</p>
-                  <select name="" id="">
-                    <option value="">Everyone</option>
-                    <option value="">Host Only</option>
+                  <p>Present</p>
+                  <select id="present">
+                    <option value="everyone" selected>Everyone</option>
+                    <option value="only-you">Only You</option>
                   </select>
                 </div>
 
                 <div class="settings">
-                  <p>Control</p>
-                  <select name="" id="">
-                    <option value="">Everyone</option>
-                    <option value="">Host Only</option>
+                  <p>File upload</p>
+                  <select id="file-upload">
+                    <option value="everyone" selected>Everyone</option>
+                    <option value="only-you">Only You</option>
                   </select>
                 </div>
 
                 <div class="settings">
-                  <p>Control</p>
-                  <select name="" id="">
-                    <option value="">Everyone</option>
-                    <option value="">Host Only</option>
-                  </select>
-                </div>
-                <div class="settings">
-                  <p>Control</p>
-                  <select name="" id="">
-                    <option value="">Everyone</option>
-                    <option value="">Host Only</option>
-                  </select>
-                </div>
-
-                <div class="settings">
-                  <p>Control</p>
-                  <select name="" id="">
-                    <option value="">Everyone</option>
-                    <option value="">Host Only</option>
+                  <p>Maximum file size</p>
+                  <select id="file-size">
+                    <option value="50">50MB</option>
+                    <option value="100" selected>100MB</option>
+                    <option value="200">200MB</option>
+                    <option value="300">300MB</option>
+                    <option value="500">500MB</option>
+                    <option value="1024">1GB</option>
+                    <option value="2048">2GB</option>
                   </select>
                 </div>
               </div>
@@ -94,25 +84,35 @@
 
     <!-- Active Room Modal-->
     <div id="active-room-modal" class="modal">
-      <div id="arm-modal-container" class="modal-container">
+      <div id="active-room-container" class="modal-container">
         <h3>Room Active</h3>
 
         <!-- Modal Content -->
         <div class="active-room-content">
           <div class="room-detail">
-            <p>IP Address: <span id="ip-address">0.0.0.0:0000</span></p>
-            <p>Room ID: <span id="room-id">AA00</span></p>
+            <p>IP Address: <span id="ip-address"></span></p>
+            <p>Room ID: <span id="room-id"></span></p>
+          </div>
+          <div class="qr-code-container">
+            <div id="qr-code"></div>
           </div>
         </div>
 
         <!-- Active Room Options -->
         <div class="room-options">
-          <button>Open Room</button>
-          <div>
-            <button>Room Settings</button>
-            <button>Export Report</button>
+          <button id="open-room-btn">Open Room</button>
+          <button id="quit-room-btn">Quit Room</button>
+        </div>
+
+        <!-- Exit Room Confirmation -->
+        <div id="confirm-quit-modal" class="confirm-quit-modal">
+          <div class="confirm-quit-container">
+            <p>Are you sure you want to quit this room for everyone?</p>
+            <div class="confirm-quit-btns">
+              <button id="cancel-quit-btn">Cancel</button>
+              <button id="confirm-quit-btn">Quit Room</button>
+            </div>
           </div>
-          <button id="exit-room">Exit Room</button>
         </div>
       </div>
     </div>
@@ -120,6 +120,7 @@
     <!-- Home Button -->
     <div id="home-btn"><i class="bi bi-house-fill"></i></div>
 
+    <script src="../js/qrcode.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/new-room.js"></script>
   </body>

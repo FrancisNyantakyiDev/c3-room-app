@@ -9,17 +9,19 @@
   animation: var(--animation-zoom-in);
 }
 
-.new-room-info {
+/* Settings Wrapper */
+.settings-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   padding: 20px;
+  width: 400px;
   background-color: var(--color-white);
   border-radius: var(--radius-md);
 }
 
-.new-room-info p {
+.settings-wrapper p {
   text-align: center;
 }
 
@@ -29,6 +31,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 #show-settings-btn,
 #hide-settings-btn {
   cursor: pointer;
@@ -68,8 +71,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 100px;
+  justify-content: space-between;
+  margin: 0 10px;
   padding: 10px;
+  width: 350px;
   border-radius: var(--radius-md);
 }
 
@@ -81,6 +86,7 @@
   outline: none;
   padding: 5px;
   cursor: pointer;
+  width: 100px;
   border: var(--border-secondary);
   border-radius: var(--radius-sm);
 }
@@ -100,19 +106,19 @@
 }
 
 #start-btn:active {
-  background-color: var(--color-teal-av);
+  background-color: var(--color-teal-a);
 }
 
 /* Active Room Modal */
-#arm-modal-container {
+#active-room-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 800px;
-  height: 400px;
+  height: 450px;
 }
 
-#arm-modal-container h3 {
+#active-room-container h3 {
   text-align: center;
 }
 
@@ -121,10 +127,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+.room-detail {
+  padding: 10px 30px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white-smoke);
 }
 
 .room-detail p {
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.room-detail span {
+  font-weight: bold;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white-smoke);
+  border-radius: var(--radius-sm);
+  width: 200px;
+  height: 200px;
 }
 
 /* Active Room Options */
@@ -143,22 +171,91 @@
   cursor: pointer;
 }
 
-.room-options button:hover {
+#open-room-btn:hover {
   background-color: var(--color-teal);
 }
 
-.room-options button:active {
-  background-color: var(--color-teal-av);
+#open-room-btn:active {
+  background-color: var(--color-teal-a);
 }
 
-#exit-room {
+#quit-room-btn {
   border: 1px solid red;
 }
 
-#exit-room:hover {
+#quit-room-btn:hover {
   background-color: red;
 }
 
-#exit-room:active {
+#quit-room-btn:active {
+  background-color: #aa0000;
+}
+
+/* Confirm Quit Room Modal */
+.confirm-quit-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000008a;
+}
+
+.confirm-quit-modal.modal-active {
+  display: flex;
+}
+
+.confirm-quit-container {
+  padding: 40px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 5px 0 #00000062;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.confirm-quit-container p {
+  font-weight: bold;
+}
+
+.confirm-quit-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 10px;
+}
+
+.confirm-quit-btns button {
+  padding: 10px;
+  width: 100px;
+  border: var(--border-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+#cancel-quit-btn {
+  background-color: var(--color-teal);
+}
+
+#cancel-quit-btn:hover {
+  background-color: var(--color-teal-a);
+}
+
+#confirm-quit-btn {
+  border: 1px solid red;
+  background-color: white;
+}
+
+#confirm-quit-btn:hover {
+  background-color: red;
+}
+
+#confirm-quit-btn:active {
   background-color: #aa0000;
 }
